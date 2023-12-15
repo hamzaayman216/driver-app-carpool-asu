@@ -23,7 +23,6 @@ final List<String> points = [
 final List<String> timeOptions = ['7:30 AM', '5:30 PM'];
 const kMainColor =Colors.lightBlueAccent;
 const kSecondaryColor=Colors.black;
-//const kMainColor =Colors.orange;
 
 const kTextFieldDecoration=InputDecoration(
   hintText: '',

@@ -3,9 +3,7 @@ import 'package:carpool/models/user.dart';
 import 'package:carpool/screens/driver_history_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:carpool/screens/driver_history_screen.dart';
 import 'driver_profile_edit_screen.dart';
-
 class DriverProfileScreen extends StatelessWidget {
   static const String id = 'driver_profile_screen';
   final CarPoolUser user;
@@ -21,8 +19,8 @@ class DriverProfileScreen extends StatelessWidget {
           padding: EdgeInsets.zero,
           children: <Widget>[
             UserAccountsDrawerHeader(
-              accountName: Text(user.name), // Replace with dynamic data
-              accountEmail: Text(user.email), // Replace with dynamic data
+              accountName: Text(user.name),
+              accountEmail: Text(user.email),
               currentAccountPicture: CircleAvatar(
                 backgroundColor: Colors.white,
                 backgroundImage: user.imageUrl == ''
@@ -30,8 +28,7 @@ class DriverProfileScreen extends StatelessWidget {
                     : NetworkImage(user.imageUrl) as ImageProvider,
               ),
               decoration: BoxDecoration(
-                color: Colors
-                    .lightBlueAccent, // Set light blue accent background for the header
+                color:kMainColor,
               ),
               otherAccountsPictures: <Widget>[
                 Text(

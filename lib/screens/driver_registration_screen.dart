@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:carpool/components/rounded_button.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import 'package:carpool/constants.dart';
-import 'package:intl/intl.dart';
 import 'package:carpool/controller/validations.dart';
 import 'package:carpool/models/database_manager.dart';
 import 'package:firebase_database/firebase_database.dart';
@@ -153,23 +152,18 @@ class _DriverRegistrationScreenState
                 try {
                   final UserCredential newUser = await _auth.createUserWithEmailAndPassword(email: email, password: password);
                   if (newUser.user != null) {
-                    // Reference to the Realtime Database
                     DatabaseReference usersRef = FirebaseDatabase.instance.ref("users");
-
-                    // Set the user data in Realtime Database
                     await usersRef.child(newUser.user!.uid).set({
                       "name": name,
                       "phoneNumber": phoneNumber,
                       "email": email,
                       "balance":balance,
                     });
-
-                    // Insert the same user data into SQLite database
                     await _databaseManager.insertUserProfile(
                       name: name,
                       email: email,
                       phoneNumber: phoneNumber,
-                      profilePhotoUrl: '', // Assuming an empty string if no URL is available
+                      profilePhotoUrl: '',
                     );
 
                     Navigator.pushNamed(context, DriverScreen.id);
@@ -178,8 +172,6 @@ class _DriverRegistrationScreenState
                   setState(() {
                     showSpinner = false;
                   });
-
-                  // Handle Firebase Auth exceptions
                   if (e is FirebaseAuthException && e.code == 'email-already-in-use') {
                     ScaffoldMessenger.of(context).showSnackBar(
                       SnackBar(
@@ -187,9 +179,6 @@ class _DriverRegistrationScreenState
                         duration: Duration(seconds: 5),
                       ),
                     );
-                  } else {
-                    print(e);
-                    // Handle other exceptions, including SQLite exceptions if needed
                   }
                 }
 

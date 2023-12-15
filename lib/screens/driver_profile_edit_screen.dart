@@ -64,22 +64,18 @@ class _DriverProfileEditScreenState extends State<DriverProfileEditScreen> {
     try {
       String imageUrl = '';
       if (_selectedImage != null) {
-        // Upload image to Firebase Storage
         String fileName = 'profile_images/${DateTime.now().millisecondsSinceEpoch}_${_selectedImage!.path.split('/').last}';
         UploadTask uploadTask = storage.ref(fileName).putFile(_selectedImage!);
         TaskSnapshot snapshot = await uploadTask;
         imageUrl = await snapshot.ref.getDownloadURL();
       }
 
-      // Query the 'users' node for the specific user
       Query query = usersRef.orderByChild('email').equalTo(userEmail);
       DatabaseEvent event = await query.once();
 
       if (event.snapshot.exists) {
         Map<dynamic, dynamic> data = event.snapshot.value as Map<dynamic, dynamic>;
         String userId = data.keys.first;
-
-        // Update the user data with new image URL
         Map<String, Object> updates = {
           'name': updatedName,
           'phoneNumber': updatedPhoneNumber,
@@ -88,10 +84,8 @@ class _DriverProfileEditScreenState extends State<DriverProfileEditScreen> {
           updates['imageUrl'] = imageUrl;
         }
         await usersRef.child(userId).update(updates);
-
-        // Update the same user data in SQLite database
         await _databaseManager.updateUserProfile(
-          id: userId, // You might need to adjust this based on your DatabaseManager implementation
+          id: userId,
           name: updatedName,
           phoneNumber: updatedPhoneNumber,
           profilePhotoUrl: imageUrl,
@@ -99,10 +93,8 @@ class _DriverProfileEditScreenState extends State<DriverProfileEditScreen> {
 
         Navigator.pushNamed(context, DriverScreen.id);
       } else {
-        print('No user found with this email');
       }
     } catch (e) {
-      print('Error updating user: $e');
     }
   }
 

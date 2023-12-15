@@ -1,18 +1,18 @@
 -- Merging decision tree log ---
 application
-INJECTED from D:\androidapps\carpool\android\app\src\main\AndroidManifest.xml:7:5-38:19
-MERGED from [:firebase_auth] D:\androidapps\carpool\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
-MERGED from [:firebase_auth] D:\androidapps\carpool\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
-MERGED from [:firebase_database] D:\androidapps\carpool\build\firebase_database\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
-MERGED from [:firebase_database] D:\androidapps\carpool\build\firebase_database\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
-MERGED from [:firebase_storage] D:\androidapps\carpool\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
-MERGED from [:firebase_storage] D:\androidapps\carpool\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
-MERGED from [:cloud_firestore] D:\androidapps\carpool\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
-MERGED from [:cloud_firestore] D:\androidapps\carpool\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
-MERGED from [:firebase_core] D:\androidapps\carpool\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
-MERGED from [:firebase_core] D:\androidapps\carpool\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
-MERGED from [:image_picker_android] D:\androidapps\carpool\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-19:19
-MERGED from [:image_picker_android] D:\androidapps\carpool\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-19:19
+INJECTED from D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\android\app\src\main\AndroidManifest.xml:7:5-38:19
+MERGED from [:firebase_auth] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
+MERGED from [:firebase_auth] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
+MERGED from [:firebase_database] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\firebase_database\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
+MERGED from [:firebase_database] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\firebase_database\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
+MERGED from [:firebase_storage] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
+MERGED from [:firebase_storage] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
+MERGED from [:cloud_firestore] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
+MERGED from [:cloud_firestore] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
+MERGED from [:firebase_core] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
+MERGED from [:firebase_core] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
+MERGED from [:image_picker_android] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-19:19
+MERGED from [:image_picker_android] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-19:19
 MERGED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\Hamza\.gradle\caches\transforms-3\8dafb78dd4f41c2156b9e509b49de7e0\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:28:5-73:19
 MERGED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\Hamza\.gradle\caches\transforms-3\8dafb78dd4f41c2156b9e509b49de7e0\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:28:5-73:19
 MERGED from [com.google.firebase:firebase-database:20.3.0] C:\Users\Hamza\.gradle\caches\transforms-3\6dcf758721fade8b703dfde2e9b067a5\transformed\jetified-firebase-database-20.3.0\AndroidManifest.xml:25:5-36:19
@@ -76,22 +76,22 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Ha
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.10.1] C:\Users\Hamza\.gradle\caches\transforms-3\10fd79064b9d8a9d2a5aee9f46f3cf07\transformed\core-1.10.1\AndroidManifest.xml:28:18-86
 	android:name
-		INJECTED from D:\androidapps\carpool\android\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\android\app\src\main\AndroidManifest.xml
 manifest
-ADDED from D:\androidapps\carpool\android\app\src\main\AndroidManifest.xml:1:1-39:12
-INJECTED from D:\androidapps\carpool\android\app\src\main\AndroidManifest.xml:1:1-39:12
-INJECTED from D:\androidapps\carpool\android\app\src\main\AndroidManifest.xml:1:1-39:12
-INJECTED from D:\androidapps\carpool\android\app\src\main\AndroidManifest.xml:1:1-39:12
-MERGED from D:\androidapps\carpool\android\app\src\main\AndroidManifest.xml:1:1-39:12
-MERGED from [:firebase_auth] D:\androidapps\carpool\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
-MERGED from [:firebase_database] D:\androidapps\carpool\build\firebase_database\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
-MERGED from [:firebase_storage] D:\androidapps\carpool\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
-MERGED from [:cloud_firestore] D:\androidapps\carpool\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
-MERGED from [:firebase_core] D:\androidapps\carpool\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
-MERGED from [:image_picker_android] D:\androidapps\carpool\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-21:12
-MERGED from [:flutter_plugin_android_lifecycle] D:\androidapps\carpool\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
-MERGED from [:modal_progress_hud_nsn] D:\androidapps\carpool\build\modal_progress_hud_nsn\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
-MERGED from [:sqflite] D:\androidapps\carpool\build\sqflite\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+ADDED from D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\android\app\src\main\AndroidManifest.xml:1:1-39:12
+INJECTED from D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\android\app\src\main\AndroidManifest.xml:1:1-39:12
+INJECTED from D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\android\app\src\main\AndroidManifest.xml:1:1-39:12
+INJECTED from D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\android\app\src\main\AndroidManifest.xml:1:1-39:12
+MERGED from D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\android\app\src\main\AndroidManifest.xml:1:1-39:12
+MERGED from [:firebase_auth] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
+MERGED from [:firebase_database] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\firebase_database\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
+MERGED from [:firebase_storage] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
+MERGED from [:cloud_firestore] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
+MERGED from [:firebase_core] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
+MERGED from [:image_picker_android] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-21:12
+MERGED from [:flutter_plugin_android_lifecycle] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:modal_progress_hud_nsn] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\modal_progress_hud_nsn\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:sqflite] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\sqflite\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\Hamza\.gradle\caches\transforms-3\8dafb78dd4f41c2156b9e509b49de7e0\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:17:1-75:12
 MERGED from [com.google.firebase:firebase-database:20.3.0] C:\Users\Hamza\.gradle\caches\transforms-3\6dcf758721fade8b703dfde2e9b067a5\transformed\jetified-firebase-database-20.3.0\AndroidManifest.xml:15:1-38:12
 MERGED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\Hamza\.gradle\caches\transforms-3\5dcd86f6f3bac8946a223313cb6d4a50\transformed\jetified-firebase-storage-20.3.0\AndroidManifest.xml:15:1-39:12
@@ -155,63 +155,63 @@ MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\Hamza\.
 MERGED from [androidx.multidex:multidex:2.0.1] C:\Users\Hamza\.gradle\caches\transforms-3\c4fb96f96a9affeea633ce6ad48f015c\transformed\multidex-2.0.1\AndroidManifest.xml:17:1-22:12
 MERGED from [io.grpc:grpc-android:1.52.1] C:\Users\Hamza\.gradle\caches\transforms-3\6a457f89b05f47cb5d95a6c1cfcbf4a9\transformed\jetified-grpc-android-1.52.1\AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\Hamza\.gradle\caches\transforms-3\a909880ede03695215836d52505b1d68\transformed\jetified-protolite-well-known-types-18.0.0\AndroidManifest.xml:2:1-11:12
-INJECTED from D:\androidapps\carpool\android\app\src\debug\AndroidManifest.xml:1:1-7:12
-INJECTED from D:\androidapps\carpool\android\app\src\debug\AndroidManifest.xml:1:1-7:12
-INJECTED from D:\androidapps\carpool\android\app\src\debug\AndroidManifest.xml:1:1-7:12
+INJECTED from D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\android\app\src\debug\AndroidManifest.xml:1:1-7:12
+INJECTED from D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\android\app\src\debug\AndroidManifest.xml:1:1-7:12
+INJECTED from D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\android\app\src\debug\AndroidManifest.xml:1:1-7:12
 	package
-		INJECTED from D:\androidapps\carpool\android\app\src\main\AndroidManifest.xml
-		ADDED from D:\androidapps\carpool\android\app\src\main\AndroidManifest.xml:1:1-39:12
-		INJECTED from D:\androidapps\carpool\android\app\src\debug\AndroidManifest.xml
+		INJECTED from D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\android\app\src\main\AndroidManifest.xml
+		ADDED from D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\android\app\src\main\AndroidManifest.xml:1:1-39:12
+		INJECTED from D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\android\app\src\debug\AndroidManifest.xml
 	android:versionName
-		INJECTED from D:\androidapps\carpool\android\app\src\main\AndroidManifest.xml
-		ADDED from D:\androidapps\carpool\android\app\src\main\AndroidManifest.xml:1:1-39:12
-		INJECTED from D:\androidapps\carpool\android\app\src\debug\AndroidManifest.xml
+		INJECTED from D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\android\app\src\main\AndroidManifest.xml
+		ADDED from D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\android\app\src\main\AndroidManifest.xml:1:1-39:12
+		INJECTED from D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\android\app\src\debug\AndroidManifest.xml
 	android:versionCode
-		INJECTED from D:\androidapps\carpool\android\app\src\main\AndroidManifest.xml
-		ADDED from D:\androidapps\carpool\android\app\src\main\AndroidManifest.xml:1:1-39:12
-		INJECTED from D:\androidapps\carpool\android\app\src\debug\AndroidManifest.xml
+		INJECTED from D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\android\app\src\main\AndroidManifest.xml
+		ADDED from D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\android\app\src\main\AndroidManifest.xml:1:1-39:12
+		INJECTED from D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\android\app\src\debug\AndroidManifest.xml
 	xmlns:android
-		ADDED from D:\androidapps\carpool\android\app\src\main\AndroidManifest.xml:1:11-69
+		ADDED from D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\android\app\src\main\AndroidManifest.xml:1:11-69
 uses-permission#android.permission.CAMERA
-ADDED from D:\androidapps\carpool\android\app\src\main\AndroidManifest.xml:2:5-65
+ADDED from D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\android\app\src\main\AndroidManifest.xml:2:5-65
 	android:name
-		ADDED from D:\androidapps\carpool\android\app\src\main\AndroidManifest.xml:2:22-62
+		ADDED from D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\android\app\src\main\AndroidManifest.xml:2:22-62
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from D:\androidapps\carpool\android\app\src\main\AndroidManifest.xml:3:5-80
+ADDED from D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\android\app\src\main\AndroidManifest.xml:3:5-80
 	android:name
-		ADDED from D:\androidapps\carpool\android\app\src\main\AndroidManifest.xml:3:22-77
+		ADDED from D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\android\app\src\main\AndroidManifest.xml:3:22-77
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from D:\androidapps\carpool\android\app\src\main\AndroidManifest.xml:4:5-81
+ADDED from D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\android\app\src\main\AndroidManifest.xml:4:5-81
 	android:name
-		ADDED from D:\androidapps\carpool\android\app\src\main\AndroidManifest.xml:4:22-78
+		ADDED from D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\android\app\src\main\AndroidManifest.xml:4:22-78
 uses-feature#android.hardware.camera
-ADDED from D:\androidapps\carpool\android\app\src\main\AndroidManifest.xml:5:5-85
+ADDED from D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\android\app\src\main\AndroidManifest.xml:5:5-85
 	android:required
-		ADDED from D:\androidapps\carpool\android\app\src\main\AndroidManifest.xml:5:58-82
+		ADDED from D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\android\app\src\main\AndroidManifest.xml:5:58-82
 	android:name
-		ADDED from D:\androidapps\carpool\android\app\src\main\AndroidManifest.xml:5:19-57
+		ADDED from D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\android\app\src\main\AndroidManifest.xml:5:19-57
 uses-sdk
-INJECTED from D:\androidapps\carpool\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from D:\androidapps\carpool\android\app\src\main\AndroidManifest.xml
-INJECTED from D:\androidapps\carpool\android\app\src\main\AndroidManifest.xml
-MERGED from [:firebase_auth] D:\androidapps\carpool\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:firebase_auth] D:\androidapps\carpool\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:firebase_database] D:\androidapps\carpool\build\firebase_database\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:firebase_database] D:\androidapps\carpool\build\firebase_database\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:firebase_storage] D:\androidapps\carpool\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:firebase_storage] D:\androidapps\carpool\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:cloud_firestore] D:\androidapps\carpool\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:cloud_firestore] D:\androidapps\carpool\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:firebase_core] D:\androidapps\carpool\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:firebase_core] D:\androidapps\carpool\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:image_picker_android] D:\androidapps\carpool\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:image_picker_android] D:\androidapps\carpool\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:flutter_plugin_android_lifecycle] D:\androidapps\carpool\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:flutter_plugin_android_lifecycle] D:\androidapps\carpool\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:modal_progress_hud_nsn] D:\androidapps\carpool\build\modal_progress_hud_nsn\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:modal_progress_hud_nsn] D:\androidapps\carpool\build\modal_progress_hud_nsn\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:sqflite] D:\androidapps\carpool\build\sqflite\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:sqflite] D:\androidapps\carpool\build\sqflite\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+INJECTED from D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\android\app\src\main\AndroidManifest.xml
+INJECTED from D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\android\app\src\main\AndroidManifest.xml
+MERGED from [:firebase_auth] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:firebase_auth] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:firebase_database] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\firebase_database\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:firebase_database] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\firebase_database\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:firebase_storage] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:firebase_storage] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:cloud_firestore] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:cloud_firestore] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:firebase_core] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:firebase_core] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:image_picker_android] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:image_picker_android] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:flutter_plugin_android_lifecycle] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:flutter_plugin_android_lifecycle] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:modal_progress_hud_nsn] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\modal_progress_hud_nsn\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:modal_progress_hud_nsn] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\modal_progress_hud_nsn\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:sqflite] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\sqflite\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:sqflite] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\sqflite\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\Hamza\.gradle\caches\transforms-3\8dafb78dd4f41c2156b9e509b49de7e0\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:21:5-23:64
 MERGED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\Hamza\.gradle\caches\transforms-3\8dafb78dd4f41c2156b9e509b49de7e0\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:21:5-23:64
 MERGED from [com.google.firebase:firebase-database:20.3.0] C:\Users\Hamza\.gradle\caches\transforms-3\6dcf758721fade8b703dfde2e9b067a5\transformed\jetified-firebase-database-20.3.0\AndroidManifest.xml:18:5-44
@@ -338,18 +338,18 @@ MERGED from [io.grpc:grpc-android:1.52.1] C:\Users\Hamza\.gradle\caches\transfor
 MERGED from [io.grpc:grpc-android:1.52.1] C:\Users\Hamza\.gradle\caches\transforms-3\6a457f89b05f47cb5d95a6c1cfcbf4a9\transformed\jetified-grpc-android-1.52.1\AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\Hamza\.gradle\caches\transforms-3\a909880ede03695215836d52505b1d68\transformed\jetified-protolite-well-known-types-18.0.0\AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\Hamza\.gradle\caches\transforms-3\a909880ede03695215836d52505b1d68\transformed\jetified-protolite-well-known-types-18.0.0\AndroidManifest.xml:7:5-9:41
-INJECTED from D:\androidapps\carpool\android\app\src\debug\AndroidManifest.xml
-INJECTED from D:\androidapps\carpool\android\app\src\debug\AndroidManifest.xml
+INJECTED from D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\android\app\src\debug\AndroidManifest.xml
+INJECTED from D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\android\app\src\debug\AndroidManifest.xml
 	tools:overrideLibrary
 		ADDED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\Hamza\.gradle\caches\transforms-3\8dafb78dd4f41c2156b9e509b49de7e0\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:23:9-61
 	android:targetSdkVersion
-		INJECTED from D:\androidapps\carpool\android\app\src\main\AndroidManifest.xml
-		INJECTED from D:\androidapps\carpool\android\app\src\debug\AndroidManifest.xml
+		INJECTED from D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\android\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\android\app\src\debug\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from D:\androidapps\carpool\android\app\src\main\AndroidManifest.xml
-		INJECTED from D:\androidapps\carpool\android\app\src\debug\AndroidManifest.xml
+		INJECTED from D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\android\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\android\app\src\debug\AndroidManifest.xml
 uses-permission#android.permission.INTERNET
-ADDED from D:\androidapps\carpool\android\app\src\debug\AndroidManifest.xml:6:5-66
+ADDED from D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\android\app\src\debug\AndroidManifest.xml:6:5-66
 MERGED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\Hamza\.gradle\caches\transforms-3\8dafb78dd4f41c2156b9e509b49de7e0\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:25:5-67
 MERGED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\Hamza\.gradle\caches\transforms-3\8dafb78dd4f41c2156b9e509b49de7e0\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:25:5-67
 MERGED from [com.google.firebase:firebase-database:20.3.0] C:\Users\Hamza\.gradle\caches\transforms-3\6dcf758721fade8b703dfde2e9b067a5\transformed\jetified-firebase-database-20.3.0\AndroidManifest.xml:23:5-67
@@ -371,17 +371,17 @@ MERGED from [com.google.android.gms:play-services-measurement-impl:21.5.0] C:\Us
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.5.0] C:\Users\Hamza\.gradle\caches\transforms-3\3ef49a037b2c375f0c8a0bc32cb8d528\transformed\jetified-play-services-measurement-sdk-api-21.5.0\AndroidManifest.xml:23:5-67
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.5.0] C:\Users\Hamza\.gradle\caches\transforms-3\3ef49a037b2c375f0c8a0bc32cb8d528\transformed\jetified-play-services-measurement-sdk-api-21.5.0\AndroidManifest.xml:23:5-67
 	android:name
-		ADDED from D:\androidapps\carpool\android\app\src\debug\AndroidManifest.xml:6:22-64
+		ADDED from D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\android\app\src\debug\AndroidManifest.xml:6:22-64
 service#com.google.firebase.components.ComponentDiscoveryService
-ADDED from [:firebase_auth] D:\androidapps\carpool\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
-MERGED from [:firebase_database] D:\androidapps\carpool\build\firebase_database\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
-MERGED from [:firebase_database] D:\androidapps\carpool\build\firebase_database\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
-MERGED from [:firebase_storage] D:\androidapps\carpool\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
-MERGED from [:firebase_storage] D:\androidapps\carpool\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
-MERGED from [:cloud_firestore] D:\androidapps\carpool\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
-MERGED from [:cloud_firestore] D:\androidapps\carpool\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
-MERGED from [:firebase_core] D:\androidapps\carpool\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
-MERGED from [:firebase_core] D:\androidapps\carpool\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
+ADDED from [:firebase_auth] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
+MERGED from [:firebase_database] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\firebase_database\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
+MERGED from [:firebase_database] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\firebase_database\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
+MERGED from [:firebase_storage] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
+MERGED from [:firebase_storage] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
+MERGED from [:cloud_firestore] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
+MERGED from [:cloud_firestore] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
+MERGED from [:firebase_core] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
+MERGED from [:firebase_core] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
 MERGED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\Hamza\.gradle\caches\transforms-3\8dafb78dd4f41c2156b9e509b49de7e0\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:66:9-72:19
 MERGED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\Hamza\.gradle\caches\transforms-3\8dafb78dd4f41c2156b9e509b49de7e0\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:66:9-72:19
 MERGED from [com.google.firebase:firebase-database:20.3.0] C:\Users\Hamza\.gradle\caches\transforms-3\6dcf758721fade8b703dfde2e9b067a5\transformed\jetified-firebase-database-20.3.0\AndroidManifest.xml:26:9-35:19
@@ -407,53 +407,53 @@ MERGED from [com.google.firebase:firebase-common:20.4.2] C:\Users\Hamza\.gradle\
 	android:directBootAware
 		ADDED from [com.google.firebase:firebase-common:20.4.2] C:\Users\Hamza\.gradle\caches\transforms-3\9a7451c0145ff0b86b0d52bfa7d56dd1\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:32:13-43
 	android:name
-		ADDED from [:firebase_auth] D:\androidapps\carpool\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:10:18-89
+		ADDED from [:firebase_auth] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:10:18-89
 meta-data#com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar
-ADDED from [:firebase_auth] D:\androidapps\carpool\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
+ADDED from [:firebase_auth] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
 	android:value
-		ADDED from [:firebase_auth] D:\androidapps\carpool\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
+		ADDED from [:firebase_auth] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
 	android:name
-		ADDED from [:firebase_auth] D:\androidapps\carpool\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-124
+		ADDED from [:firebase_auth] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-124
 meta-data#com.google.firebase.components:io.flutter.plugins.firebase.database.FlutterFirebaseAppRegistrar
-ADDED from [:firebase_database] D:\androidapps\carpool\build\firebase_database\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
+ADDED from [:firebase_database] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\firebase_database\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
 	android:value
-		ADDED from [:firebase_database] D:\androidapps\carpool\build\firebase_database\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
+		ADDED from [:firebase_database] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\firebase_database\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
 	android:name
-		ADDED from [:firebase_database] D:\androidapps\carpool\build\firebase_database\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-127
+		ADDED from [:firebase_database] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\firebase_database\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-127
 meta-data#com.google.firebase.components:io.flutter.plugins.firebase.storage.FlutterFirebaseAppRegistrar
-ADDED from [:firebase_storage] D:\androidapps\carpool\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
+ADDED from [:firebase_storage] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
 	android:value
-		ADDED from [:firebase_storage] D:\androidapps\carpool\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
+		ADDED from [:firebase_storage] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
 	android:name
-		ADDED from [:firebase_storage] D:\androidapps\carpool\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-126
+		ADDED from [:firebase_storage] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-126
 meta-data#com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar
-ADDED from [:cloud_firestore] D:\androidapps\carpool\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
+ADDED from [:cloud_firestore] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
 	android:value
-		ADDED from [:cloud_firestore] D:\androidapps\carpool\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
+		ADDED from [:cloud_firestore] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
 	android:name
-		ADDED from [:cloud_firestore] D:\androidapps\carpool\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-134
+		ADDED from [:cloud_firestore] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-134
 meta-data#com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar
-ADDED from [:firebase_core] D:\androidapps\carpool\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
+ADDED from [:firebase_core] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
 	android:value
-		ADDED from [:firebase_core] D:\androidapps\carpool\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
+		ADDED from [:firebase_core] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
 	android:name
-		ADDED from [:firebase_core] D:\androidapps\carpool\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-124
+		ADDED from [:firebase_core] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-124
 provider#io.flutter.plugins.imagepicker.ImagePickerFileProvider
-ADDED from [:image_picker_android] D:\androidapps\carpool\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-18:20
+ADDED from [:image_picker_android] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-18:20
 	android:grantUriPermissions
-		ADDED from [:image_picker_android] D:\androidapps\carpool\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-47
+		ADDED from [:image_picker_android] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-47
 	android:authorities
-		ADDED from [:image_picker_android] D:\androidapps\carpool\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-74
+		ADDED from [:image_picker_android] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-74
 	android:exported
-		ADDED from [:image_picker_android] D:\androidapps\carpool\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-37
+		ADDED from [:image_picker_android] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-37
 	android:name
-		ADDED from [:image_picker_android] D:\androidapps\carpool\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-82
+		ADDED from [:image_picker_android] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-82
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from [:image_picker_android] D:\androidapps\carpool\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-17:75
+ADDED from [:image_picker_android] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-17:75
 	android:resource
-		ADDED from [:image_picker_android] D:\androidapps\carpool\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:17:17-72
+		ADDED from [:image_picker_android] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:17:17-72
 	android:name
-		ADDED from [:image_picker_android] D:\androidapps\carpool\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:16:17-67
+		ADDED from [:image_picker_android] D:\Fall 23\Mobile\Project Files\driver app\driver-app-carpool-asu\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:16:17-67
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\Hamza\.gradle\caches\transforms-3\8dafb78dd4f41c2156b9e509b49de7e0\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:26:5-79
 MERGED from [com.google.firebase:firebase-database:20.3.0] C:\Users\Hamza\.gradle\caches\transforms-3\6dcf758721fade8b703dfde2e9b067a5\transformed\jetified-firebase-database-20.3.0\AndroidManifest.xml:22:5-79

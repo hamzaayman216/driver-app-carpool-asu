@@ -20,7 +20,7 @@ class DriverRideTile extends StatefulWidget {
 class _DriverRideTileState extends State<DriverRideTile> {
   IconData deleteButtonIcon = Icons.delete;
   IconData checkButtonIcon = Icons.check;
-  String driverImageUrl = 'default_image_url'; // Placeholder URL
+  String driverImageUrl = ''; // Placeholder URL
   String driverName = '';
   String driverPhoneNumber = '';
 

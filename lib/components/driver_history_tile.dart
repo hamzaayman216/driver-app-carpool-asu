@@ -4,12 +4,15 @@ import 'package:carpool/screens/chat_history_screen.dart';
 import 'package:carpool/screens/delete_ride_screen.dart';
 import 'package:carpool/screens/driver_chat_screen.dart';
 import 'package:carpool/screens/show_passengers_screen.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:carpool/models/ride.dart';
 import 'package:firebase_database/firebase_database.dart';
+late User loggedInUser;
 
 class DriverHistoryTile extends StatefulWidget {
   final Ride ride;
+
 
   DriverHistoryTile({required this.ride});
 
@@ -18,16 +21,19 @@ class DriverHistoryTile extends StatefulWidget {
 }
 
 class _DriverHistoryTileState extends State<DriverHistoryTile> {
+  final FirebaseAuth _auth = FirebaseAuth.instance;
   IconData deleteButtonIcon = Icons.delete;
   IconData checkButtonIcon = Icons.check;
-  String driverImageUrl = 'default_image_url'; // Placeholder URL
+  String driverImageUrl = ''; // Placeholder URL
   String driverName = '';
   String driverPhoneNumber = '';
 
   @override
   void initState() {
     super.initState();
+    loggedInUser = _auth.currentUser!;
     getDriverDetails(widget.ride.driverId);
+
   }
 
   Future<void> getDriverDetails(String driverId) async {
@@ -87,7 +93,7 @@ class _DriverHistoryTileState extends State<DriverHistoryTile> {
       child: ListTile(
         leading: CircleAvatar(
           backgroundColor: Colors.white,
-          backgroundImage: NetworkImage(driverImageUrl),
+          backgroundImage: driverImageUrl==''?AssetImage('images/avatar.jpg')as ImageProvider:NetworkImage(driverImageUrl) as ImageProvider,
         ),
         title: Text(driverName, style: TextStyle(color: kSecondaryColor)),
         subtitle: Column(
@@ -136,7 +142,7 @@ class _DriverHistoryTileState extends State<DriverHistoryTile> {
                   context,
                   MaterialPageRoute(
                     builder: (context) =>
-                        ChatHistoryScreen(rideId: widget.ride.id),
+                        ChatHistoryScreen(rideId: widget.ride.id,loggedInUser: loggedInUser,),
                   ),
                 );
               },

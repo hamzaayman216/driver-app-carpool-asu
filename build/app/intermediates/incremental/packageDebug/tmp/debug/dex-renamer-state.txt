@@ -1,7 +1,7 @@
-#Mon Dec 11 19:04:59 EET 2023
-base.0=D\:\\androidapps\\carpool\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
-base.1=D\:\\androidapps\\carpool\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes2.dex
-base.2=D\:\\androidapps\\carpool\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes3.dex
+#Fri Dec 15 18:10:26 EET 2023
+base.0=D\:\\Fall 23\\Mobile\\Project Files\\driver app\\driver-app-carpool-asu\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+base.1=D\:\\Fall 23\\Mobile\\Project Files\\driver app\\driver-app-carpool-asu\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes2.dex
+base.2=D\:\\Fall 23\\Mobile\\Project Files\\driver app\\driver-app-carpool-asu\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes3.dex
 path.0=classes.dex
 path.1=classes2.dex
 path.2=classes3.dex
