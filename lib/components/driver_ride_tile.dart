@@ -25,7 +25,7 @@ class _DriverRideTileState extends State<DriverRideTile> {
   final FirebaseAuth _auth = FirebaseAuth.instance;
   IconData deleteButtonIcon = Icons.delete;
   IconData checkButtonIcon = Icons.check;
-  String driverImageUrl = ''; // Placeholder URL
+  String driverImageUrl = '';
   String driverName = '';
   String driverPhoneNumber = '';
 

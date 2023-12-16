@@ -2,7 +2,6 @@ import 'package:carpool/components/driver_history_tile.dart';
 import 'package:carpool/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:carpool/models/ride.dart';
-import 'package:carpool/components/driver_ride_tile.dart';
 
 class DriverHistoryList extends StatelessWidget {
   final Stream<List<Ride>> ridesStream;

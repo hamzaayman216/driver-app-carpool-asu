@@ -1,14 +1,11 @@
 import 'package:carpool/constants.dart';
 import 'package:carpool/controller/services/user_service.dart';
-import 'package:carpool/models/user.dart'; // Ensure this path is correct for your CarPoolUser model
+import 'package:carpool/models/user.dart';
 import 'package:carpool/screens/chat_history_screen.dart';
-import 'package:carpool/screens/delete_ride_screen.dart';
-import 'package:carpool/screens/driver_chat_screen.dart';
 import 'package:carpool/screens/show_passengers_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:carpool/models/ride.dart';
-import 'package:firebase_database/firebase_database.dart';
 late User loggedInUser;
 
 class DriverHistoryTile extends StatefulWidget {
@@ -26,7 +23,7 @@ class _DriverHistoryTileState extends State<DriverHistoryTile> {
   final FirebaseAuth _auth = FirebaseAuth.instance;
   IconData deleteButtonIcon = Icons.delete;
   IconData checkButtonIcon = Icons.check;
-  String driverImageUrl = ''; // Placeholder URL
+  String driverImageUrl = '';
   String driverName = '';
   String driverPhoneNumber = '';
 
