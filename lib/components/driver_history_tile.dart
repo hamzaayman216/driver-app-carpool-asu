@@ -1,4 +1,5 @@
 import 'package:carpool/constants.dart';
+import 'package:carpool/controller/services/user_service.dart';
 import 'package:carpool/models/user.dart'; // Ensure this path is correct for your CarPoolUser model
 import 'package:carpool/screens/chat_history_screen.dart';
 import 'package:carpool/screens/delete_ride_screen.dart';
@@ -21,6 +22,7 @@ class DriverHistoryTile extends StatefulWidget {
 }
 
 class _DriverHistoryTileState extends State<DriverHistoryTile> {
+  UserService userService = UserService();
   final FirebaseAuth _auth = FirebaseAuth.instance;
   IconData deleteButtonIcon = Icons.delete;
   IconData checkButtonIcon = Icons.check;
@@ -37,37 +39,19 @@ class _DriverHistoryTileState extends State<DriverHistoryTile> {
   }
 
   Future<void> getDriverDetails(String driverId) async {
-    DatabaseReference usersRef =
-    FirebaseDatabase.instance.ref('users').child(driverId);
-    DatabaseEvent event = await usersRef.once();
+    Map<String, dynamic>? userData =await
+    userService.getDriverDetails(driverId);
+    setState(() {
+      driverImageUrl = userData!['imageUrl'] ??
+          '';
+      driverName = userData!['name'] ?? 'Unknown';
+      driverPhoneNumber = userData!['phoneNumber'] ?? 'N/A';
+    });
 
-    if (event.snapshot.exists) {
-      Map<String, dynamic> userData =
-      Map<String, dynamic>.from(event.snapshot.value as Map);
-      setState(() {
-        driverImageUrl = userData['imageUrl'] ??
-            'default_image_url'; // Update with actual default URL if needed
-        driverName = userData['name'] ?? 'Unknown';
-        driverPhoneNumber = userData['phoneNumber'] ?? 'N/A';
-      });
-    }
   }
 
   void fetchPassengersAndShowScreen() async {
-    List<CarPoolUser> passengers = [];
-    DatabaseReference usersRef = FirebaseDatabase.instance.ref('users');
-
-    for (String passengerId in widget.ride.passengerIds ?? []) {
-      DataSnapshot snapshot = await usersRef.child(passengerId).get();
-
-      if (snapshot.exists) {
-        Map<String, dynamic> userData =
-        Map<String, dynamic>.from(snapshot.value as Map);
-        CarPoolUser user = CarPoolUser.fromMap(
-            userData); // Assuming you have a fromMap constructor
-        passengers.add(user);
-      }
-    }
+    List<CarPoolUser> passengers = await userService.fetchPassengers(widget.ride);
 
     showModalBottomSheet(
       context: context,

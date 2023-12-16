@@ -1,4 +1,5 @@
 import 'package:carpool/constants.dart';
+import 'package:carpool/controller/services/user_service.dart';
 import 'package:carpool/models/paid_status.dart';
 import 'package:carpool/models/user.dart';
 import 'package:carpool/screens/delete_ride_screen.dart';
@@ -20,6 +21,7 @@ class DriverRideTile extends StatefulWidget {
 }
 
 class _DriverRideTileState extends State<DriverRideTile> {
+  UserService userService = UserService();
   final FirebaseAuth _auth = FirebaseAuth.instance;
   IconData deleteButtonIcon = Icons.delete;
   IconData checkButtonIcon = Icons.check;
@@ -35,37 +37,19 @@ class _DriverRideTileState extends State<DriverRideTile> {
   }
 
   Future<void> getDriverDetails(String driverId) async {
-    DatabaseReference usersRef =
-        FirebaseDatabase.instance.ref('users').child(driverId);
-    DatabaseEvent event = await usersRef.once();
-
-    if (event.snapshot.exists) {
-      Map<String, dynamic> userData =
-          Map<String, dynamic>.from(event.snapshot.value as Map);
+      Map<String, dynamic>? userData =await
+         userService.getDriverDetails(driverId);
       setState(() {
-        driverImageUrl = userData['imageUrl'] ??
-            ''; // Update with actual default URL if needed
-        driverName = userData['name'] ?? 'Unknown';
-        driverPhoneNumber = userData['phoneNumber'] ?? 'N/A';
+        driverImageUrl = userData!['imageUrl'] ??
+            '';
+        driverName = userData!['name'] ?? 'Unknown';
+        driverPhoneNumber = userData!['phoneNumber'] ?? 'N/A';
       });
-    }
+
   }
 
   void fetchPassengersAndShowScreen() async {
-    List<CarPoolUser> passengers = [];
-    DatabaseReference usersRef = FirebaseDatabase.instance.ref('users');
-
-    for (String passengerId in widget.ride.passengerIds ?? []) {
-      DataSnapshot snapshot = await usersRef.child(passengerId).get();
-
-      if (snapshot.exists) {
-        Map<String, dynamic> userData =
-            Map<String, dynamic>.from(snapshot.value as Map);
-        CarPoolUser user = CarPoolUser.fromMap(
-            userData); // Assuming you have a fromMap constructor
-        passengers.add(user);
-      }
-    }
+    List<CarPoolUser> passengers = await userService.fetchPassengers(widget.ride);
 
     showModalBottomSheet(
       context: context,
@@ -295,16 +279,11 @@ class _DriverRideTileState extends State<DriverRideTile> {
                                 }
                               }
                             }
-
-                            // Update the driver's balance
                             DataSnapshot driverSnapshot = await usersRef.child(widget.ride.driverId).get();
                             CarPoolUser driver = CarPoolUser.fromMap(Map<String, dynamic>.from(driverSnapshot.value as Map));
                             usersRef.child(widget.ride.driverId).update({'balance': driver.balance + totalDeduction});
-
-                            // Update the ride's status to 'Finished'
                             ridesRef.child(widget.ride.id).update({'status': 'Finished'});
                           } else {
-                            // Show a Snackbar if the ride is not started
                             ScaffoldMessenger.of(context).showSnackBar(
                               SnackBar(
                                 content: Center(child: Text('Ride should be started first', style: TextStyle(color: Colors.red))),
