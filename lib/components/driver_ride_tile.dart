@@ -1,12 +1,14 @@
 import 'package:carpool/constants.dart';
 import 'package:carpool/models/paid_status.dart';
-import 'package:carpool/models/user.dart'; // Ensure this path is correct for your CarPoolUser model
+import 'package:carpool/models/user.dart';
 import 'package:carpool/screens/delete_ride_screen.dart';
 import 'package:carpool/screens/driver_chat_screen.dart';
 import 'package:carpool/screens/show_passengers_screen.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:carpool/models/ride.dart';
 import 'package:firebase_database/firebase_database.dart';
+late User loggedInUser;
 
 class DriverRideTile extends StatefulWidget {
   final Ride ride;
@@ -18,6 +20,7 @@ class DriverRideTile extends StatefulWidget {
 }
 
 class _DriverRideTileState extends State<DriverRideTile> {
+  final FirebaseAuth _auth = FirebaseAuth.instance;
   IconData deleteButtonIcon = Icons.delete;
   IconData checkButtonIcon = Icons.check;
   String driverImageUrl = ''; // Placeholder URL
@@ -27,6 +30,7 @@ class _DriverRideTileState extends State<DriverRideTile> {
   @override
   void initState() {
     super.initState();
+    loggedInUser = _auth.currentUser!;
     getDriverDetails(widget.ride.driverId);
   }
 
@@ -244,7 +248,7 @@ class _DriverRideTileState extends State<DriverRideTile> {
                           context,
                           MaterialPageRoute(
                             builder: (context) =>
-                                DriverChatScreen(rideId: widget.ride.id),
+                                DriverChatScreen(rideId: widget.ride.id,loggedInUser: loggedInUser,),
                           ),
                         );
                       },

@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_database/firebase_database.dart';
 import 'package:carpool/constants.dart';
 import 'package:carpool/components/message_stream.dart';
-
-final _database = FirebaseDatabase.instance.reference();
-final _auth = FirebaseAuth.instance;
 
 class ChatHistoryScreen extends StatefulWidget {
   static const String id = 'driver_chat_screen';

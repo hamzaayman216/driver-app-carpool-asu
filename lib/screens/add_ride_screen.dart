@@ -1,21 +1,22 @@
 import 'package:carpool/constants.dart';
-import 'package:carpool/models/user.dart';
+import 'package:carpool/controller/services/rides_service.dart';
+import 'package:carpool/controller/validations.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:carpool/models/ride.dart';
-import 'package:firebase_auth/firebase_auth.dart' as fbAuth;
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 
 FirebaseDatabase database = FirebaseDatabase.instance;
-late fbAuth.User loggedInUser;
 
 class AddRideScreen extends StatefulWidget {
+  late User loggedInUser;
+  AddRideScreen({required this.loggedInUser});
   @override
   State<AddRideScreen> createState() => _AddRideScreenState();
 }
 
 class _AddRideScreenState extends State<AddRideScreen> {
-  final _auth = FirebaseAuth.instance;
+  final RidesService _ridesService = RidesService();
   String errorMessage = '';
   int numberOfPassengers = 1;
   bool womenOnly = false;
@@ -32,7 +33,6 @@ class _AddRideScreenState extends State<AddRideScreen> {
   @override
   void initState() {
     super.initState();
-    getCurrentUser();
     setInitialTime();
   }
 
@@ -62,18 +62,6 @@ class _AddRideScreenState extends State<AddRideScreen> {
     }
   }
 
-
-
-  void getCurrentUser() async {
-    try {
-      final user = _auth.currentUser;
-      if (user != null) {
-        loggedInUser = user;
-      }
-    } catch (e) {
-      print(e);
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -264,17 +252,17 @@ class _AddRideScreenState extends State<AddRideScreen> {
             TextButton(
               onPressed: () => _selectDate(context),
               style: ElevatedButton.styleFrom(
-                primary: Colors.white, // Set background color to black
+                primary: Colors.white,
               ),
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Icon(
                     Icons.date_range,
-                    color: kSecondaryColor, // Set icon color to white
+                    color: kSecondaryColor,
                   ),
                   SizedBox(
-                      width: 8), // Add some space between the icon and text
+                      width: 8),
                   Text(
                     'Selected Date: ${selectedDate != null ? selectedDate!.toLocal().toString().split(' ')[0] : 'Select Date'}',
                     style: TextStyle(color: kSecondaryColor),
@@ -313,131 +301,65 @@ class _AddRideScreenState extends State<AddRideScreen> {
             ),
             TextButton(
               onPressed: () async {
-                if (selectedDate == null || selectedRideTime == null) {
-                  setState(() {
-                    errorMessage = 'Please choose Date and Time';
-                  });
-                  return;
-                } else if ((selectedStart == 'Gate 3' ||
-                        selectedStart == 'Gate 4') &&
-                    (selectedEnd == 'Gate 3' || selectedEnd == 'Gate 4')) {
-                  setState(() {
-                    errorMessage = 'Path must be from or to university';
-                  });
-                  return;
-                } else if ((selectedStart != 'Gate 3' &&
-                        selectedStart != 'Gate 4') &&
-                    (selectedEnd != 'Gate 3' && selectedEnd != 'Gate 4')) {
-                  setState(() {
-                    errorMessage = 'Path must be from or to university';
-                  });
-                  return;
-                }
 
-                if (selectedRideTime == '7:30 AM') {
-                  if (selectedStart == 'Gate 3' || selectedStart == 'Gate 4') {
-                    setState(() {
-                      errorMessage = 'Invalid start point for 7:30 AM ride';
-                    });
-                    return;
-                  } else if (selectedEnd != 'Gate 3' && selectedEnd != 'Gate 4') {
-                    setState(() {
-                      errorMessage = 'Invalid end point for 7:30 AM ride';
-                    });
-                    return;
+                if (selectedDate != null && selectedRideTime != null) {
+                  errorMessage = validateAddRide(selectedDate!, selectedRideTime!, selectedStart, selectedEnd);
+                  if (errorMessage.isEmpty) {
+                    if (menOnly == true) {
+                      preferences.add('Men Only');
+                    }
+                    if (womenOnly == true) {
+                      preferences.add('Women Only');
+                    }
+                    if (noSmoking == true) {
+                      preferences.add('No Smoking');
+                    }
+                    if (acOn == true) {
+                      preferences.add('AC On');
+                    }
 
+                    String date =
+                        '${selectedDate?.year}-${selectedDate?.month}-${selectedDate?.day}';
+                    String time = selectedRideTime!;
+
+                    String newRideId =
+                        database.ref().child('rides').push().key ?? '';
+                    Ride ride = Ride(
+                        time: time,
+                        date: date,
+                        endPoint: selectedEnd,
+                        startPoint: selectedStart,
+                        id: newRideId,
+                        numberOfPassengers: numberOfPassengers,
+                        confirmed: false,
+                        preferences: preferences,
+                        driverId: widget.loggedInUser.uid,
+                        chatMessages: [],
+                        status: 'Pending'
+                    );
+
+                    await _ridesService.addRide(ride);
+                    Navigator.pop(context);
+                  } else {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        content: Center(child: Text(errorMessage, style: TextStyle(color: Colors.red))),
+                        duration: Duration(seconds: 3),
+                      ),
+                    );
                   }
-                } else if (selectedRideTime == '5:30 PM') {
-                  if (selectedEnd == 'Gate 3' || selectedEnd == 'Gate 4') {
-                    setState(() {
-                      errorMessage = 'Invalid end point for 5:30 PM ride';
-                    });
-                    return;
-                  } else if (selectedStart != 'Gate 3' && selectedStart != 'Gate 4') {
-                    setState(() {
-                      errorMessage = 'Invalid start point for 5:30 PM ride';
-                    });
-                    return;
-                  }
-                }
-
-                DateTime now = DateTime.now();
-
-                if(selectedRideTime=='7:30 AM') {
-                  int newHour = 7;
-                  int newMinute=30;
-                  DateTime modifiedDate = DateTime(
-                    selectedDate!.year,
-                    selectedDate!.month,
-                    selectedDate!.day,
-                    newHour,
-                    newMinute,
-                    selectedDate!.second,
-                    selectedDate!.millisecond,
-                    selectedDate!.microsecond,
+                } else {
+                  Navigator.pop(context);
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      content: Center(child: Text('Please Choose date and time', style: TextStyle(color: Colors.red))),
+                      duration: Duration(seconds: 3),
+                    ),
                   );
-                  if ((modifiedDate.difference(now!)).inMinutes<790) {
-                    setState(() {
-                      errorMessage = '7:30 AM rides should be added before 8 PM';
-                    });
-                    return;
-                  }
-                }else if(selectedRideTime=='5:30 PM'){
-                  int newHour = 17;
-                  int newMinute=30;
-                  DateTime modifiedDate = DateTime(
-                    selectedDate!.year,
-                    selectedDate!.month,
-                    selectedDate!.day,
-                    newHour,
-                    newMinute,
-                    selectedDate!.second,
-                    selectedDate!.millisecond,
-                    selectedDate!.microsecond,
-                  );
-                  if ((modifiedDate.difference(now!)).inMinutes<390) {
-                    setState(() {
-                      errorMessage = '5:30 PM rides should be added before 11 AM';
-                    });
-                    return;
-                  }
                 }
+                setState(() {});
 
-                if (menOnly == true) {
-                  preferences.add('Men Only');
-                }
-                if (womenOnly == true) {
-                  preferences.add('Women Only');
-                }
-                if (noSmoking == true) {
-                  preferences.add('No Smoking');
-                }
-                if (acOn == true) {
-                  preferences.add('AC On');
-                }
 
-                String date =
-                    '${selectedDate?.year}-${selectedDate?.month}-${selectedDate?.day}';
-                String time = selectedRideTime!;
-
-                String newRideId =
-                    database.ref().child('rides').push().key ?? '';
-                Ride ride = Ride(
-                  time: time,
-                  date: date,
-                  endPoint: selectedEnd,
-                  startPoint: selectedStart,
-                  id: newRideId,
-                  numberOfPassengers: numberOfPassengers,
-                  confirmed: false,
-                  preferences: preferences,
-                  driverId: loggedInUser.uid,
-                  chatMessages: [],
-                  status: 'Pending'
-                );
-
-                await database.ref('rides/$newRideId').set(ride.toMap());
-                Navigator.pop(context);
               },
               child: Text(
                 'Add',

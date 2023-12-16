@@ -5,14 +5,13 @@ import 'package:carpool/constants.dart';
 import 'package:carpool/components/message_stream.dart';
 
 final _database = FirebaseDatabase.instance.reference();
-final _auth = FirebaseAuth.instance;
-late User loggedInUser;
-
 class DriverChatScreen extends StatefulWidget {
   static const String id = 'driver_chat_screen';
   final String rideId;
+  final User loggedInUser;
 
-  DriverChatScreen({required this.rideId});
+
+  DriverChatScreen({required this.rideId,required this.loggedInUser});
 
   @override
   _DriverChatScreenState createState() => _DriverChatScreenState();
@@ -25,19 +24,6 @@ class _DriverChatScreenState extends State<DriverChatScreen> {
   @override
   void initState() {
     super.initState();
-    getCurrentUser();
-  }
-
-  void getCurrentUser() async {
-    try {
-      final user = await _auth.currentUser;
-      if (user != null) {
-        loggedInUser = user;
-        print(loggedInUser.email);
-      }
-    } catch (e) {
-      print(e);
-    }
   }
 
   void _sendMessage() {
@@ -46,7 +32,7 @@ class _DriverChatScreenState extends State<DriverChatScreen> {
     if (messageText.isNotEmpty) {
       _database.child('rides/${widget.rideId}/chat').push().set({
         'text': messageText,
-        'sender': loggedInUser.email,
+        'sender': widget.loggedInUser.email,
         'timestamp': ServerValue.timestamp, // Add this line to include the timestamp
       });
       messageTextController.clear();
@@ -70,7 +56,7 @@ class _DriverChatScreenState extends State<DriverChatScreen> {
           children: <Widget>[
             MessagesStream(
               rideId: widget.rideId,
-              loggedInUser: loggedInUser,
+              loggedInUser: widget.loggedInUser,
             ),
             Container(
               decoration: kMessageContainerDecoration,

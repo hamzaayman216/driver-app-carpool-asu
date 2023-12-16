@@ -1,11 +1,7 @@
 import 'package:carpool/constants.dart';
+import 'package:carpool/controller/services/rides_service.dart';
 import 'package:flutter/material.dart';
 import 'package:carpool/models/ride.dart';
-import 'package:firebase_auth/firebase_auth.dart' as fbAuth;
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_database/firebase_database.dart';
-
-late fbAuth.User loggedInUser;
 
 class DeleteRideScreen extends StatefulWidget {
   final Ride ride;
@@ -16,8 +12,7 @@ class DeleteRideScreen extends StatefulWidget {
 }
 
 class _DeleteRideScreenState extends State<DeleteRideScreen> {
-  final _auth = FirebaseAuth.instance;
-
+  final RidesService _ridesService = RidesService();
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -45,29 +40,9 @@ class _DeleteRideScreenState extends State<DeleteRideScreen> {
               TextButton(
                 onPressed: () async {
                   try {
-                    // Reference to the 'rides' node
-                    DatabaseReference ridesRef = FirebaseDatabase.instance.ref('rides');
-
-                    // Query the 'rides' node for the specific ride
-                    Query query = ridesRef.orderByChild('id').equalTo(widget.ride.id);
-                    DataSnapshot snapshot = await query.get();
-
-                    if (snapshot.exists) {
-                      Map<dynamic, dynamic> data = snapshot.value as Map<dynamic, dynamic>;
-                      String keyToDelete = data.keys.firstWhere(
-                            (k) => data[k]['id'] == widget.ride.id,
-                        orElse: () => null,
-                      );
-
-                      if (keyToDelete != null) {
-                        // Delete the specific ride
-                        await ridesRef.child(keyToDelete).remove();
-                      }
-                    }
-
+                    await _ridesService.deleteRide(widget.ride.id);
                     Navigator.pop(context);
                   } catch (e) {
-                    print('Error deleting ride: $e');
                   }
                 },
                 child: Text(

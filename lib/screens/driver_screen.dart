@@ -76,7 +76,7 @@ class _DriverScreenState extends State<DriverScreen> {
               builder: (context) => SingleChildScrollView(
                 child: Container(
                   padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
-                  child: AddRideScreen(),
+                  child: AddRideScreen(loggedInUser:loggedInUser),
                 ),
               ),
             );
